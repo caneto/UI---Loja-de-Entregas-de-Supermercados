@@ -50,7 +50,7 @@ class HomeBottomBar extends StatelessWidget {
             ],
           ),
           InkWell(
-            //onTap: () => Navigator.pushNamed(context, 'cartPage'),
+            onTap: () => Navigator.pushNamed(context, 'cartPage'),
             child: Column(
               children: const [
                 Icon(

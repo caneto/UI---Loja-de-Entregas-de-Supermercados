@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uidelojadesupermercados/widgets/item_botton_bar.dart';
 
 class ItemPage extends StatelessWidget {
   const ItemPage({Key? key}) : super(key: key);
@@ -132,7 +133,7 @@ class ItemPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                   height: 8,
+                  height: 8,
                 ),
                 Text(
                   'Está é a descrição do produto.Lorem ipsum dolor sit amet. Aut consequatur illo in repudiandae odit et repellat aliquam sed iure voluptas quo minus ratione hic odit atque. ',
@@ -144,10 +145,60 @@ class ItemPage extends StatelessWidget {
             ),
           ),
           const SizedBox(
-             height: 15,
+            height: 15,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Padding(
+                padding: EdgeInsets.only(left: 25),
+                child: Text(
+                  'Apenas para Você',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    for(int i=1; i<9; i++)
+                    Container(
+                      height: 90,
+                      width: 90,
+                      padding: const EdgeInsets.all(5),
+                      margin:
+                          const EdgeInsets.only(top: 8, bottom: 8, left: 20),
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 255, 230, 177),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.2),
+                            spreadRadius: 1,
+                            blurRadius: 8,
+                          ),
+                        ],
+                      ),
+                      child: Image.asset(
+                        'images/$i.png',
+                        fit: BoxFit.contain,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ],
           ),
         ],
       ),
+      bottomNavigationBar: const ItemBottonBar(),
     );
   }
 }
