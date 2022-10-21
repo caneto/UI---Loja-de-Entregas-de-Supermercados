@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uidelojadesupermercados/widgets/home_bottom_bar.dart';
 
 import 'widgets/home_page_posts.dart';
 
@@ -71,6 +72,7 @@ class HomePage extends StatelessWidget {
           const HomePagePosts(),
         ],
       ),
+      bottomNavigationBar: const HomeBottomBar(),
     );
   }
 }
