@@ -12,7 +12,19 @@ class _CartPageState extends State<CartPage> {
    @override
    Widget build(BuildContext context) {
        return Scaffold(
-           body: Container(),
+           body: ListView(
+            children: [
+              InkWell(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: const Icon(
+                  Icons.arrow_back,
+                  size: 2,
+                ),
+              ),
+            ]
+           ),
        );
   }
 }
