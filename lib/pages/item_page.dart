@@ -78,17 +78,74 @@ class ItemPage extends StatelessWidget {
                 ]),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  'Nome do Item',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                Column(
+                  children: const [
+                    Text(
+                      'R\$50',
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFFFFB608),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      '400 Gramas',
+                      style: TextStyle(
+                        fontSize: 16,
+                      ),
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+            margin: const EdgeInsets.symmetric(horizontal: 20),
+            decoration: BoxDecoration(color: Colors.white, boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.3),
+                spreadRadius: 1,
+                blurRadius: 5,
+              )
+            ]),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
                 Text(
-                  'Nome do Item',
-                   style: TextStyle(
+                  'Detalhes do Produto',
+                  style: TextStyle(
                     fontSize: 20,
-                    fontWeight: FontWeight.bold
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(
+                   height: 8,
+                ),
+                Text(
+                  'Está é a descrição do produto.Lorem ipsum dolor sit amet. Aut consequatur illo in repudiandae odit et repellat aliquam sed iure voluptas quo minus ratione hic odit atque. ',
+                  style: TextStyle(
+                    fontSize: 16,
                   ),
                 ),
               ],
             ),
-          )
+          ),
+          const SizedBox(
+             height: 15,
+          ),
         ],
       ),
     );
