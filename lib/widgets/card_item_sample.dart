@@ -30,7 +30,35 @@ class _CardItemSampleState extends State<CardItemSample> {
             width: 70,
             padding: const EdgeInsets.all(5),
             margin: const EdgeInsets.only(left: 5),
-          )
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 255, 230, 177),
+              borderRadius: BorderRadius.circular(10),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.2),
+                  spreadRadius: 1,
+                  blurRadius: 8,
+                )
+              ],
+            ),
+            child: Image.asset(
+              'images/1.png',
+              fit: BoxFit.contain,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Column(children: const [
+              Text(
+                'Nome do Item',
+                 style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(162, 0, 0, 0),
+                 ), 
+              ),
+            ]),
+          ),
         ],
       ),
     );
