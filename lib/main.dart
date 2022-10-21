@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:uidelojadesupermercados/pages/item_page.dart';
 
-import 'home_page.dart';
+import 'pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +32,11 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      
+      routes: {
+        "/":(context) => const HomePage(),
+        "itemPage":(context) => const ItemPage(),
+      },
     );
   }
 }

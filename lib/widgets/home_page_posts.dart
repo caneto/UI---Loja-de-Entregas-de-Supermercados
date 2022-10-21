@@ -60,7 +60,7 @@ class HomePagePosts extends StatelessWidget {
                   children: [
                     InkWell(
                       onTap: () {
-                        //Navigator.pushNamed(context, 'itemPage');
+                        Navigator.pushNamed(context, 'itemPage');
                       },
                       child: Image.asset(
                         'images/$i.png',
