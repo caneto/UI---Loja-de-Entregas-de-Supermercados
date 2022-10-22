@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uidelojadesupermercados/widgets/card_item_sample.dart';
+import 'package:uidelojadesupermercados/widgets/cart_botton_bar.dart';
 
 class CartPage extends StatefulWidget {
   const CartPage({Key? key}) : super(key: key);
@@ -87,6 +88,7 @@ class _CartPageState extends State<CartPage> {
           ),
         ),
       ]),
+      bottomNavigationBar: const CartBottonBar(),
     );
   }
 }

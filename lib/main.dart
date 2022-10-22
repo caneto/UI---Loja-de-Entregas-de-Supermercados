@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:uidelojadesupermercados/pages/cart_page.dart';
 import 'package:uidelojadesupermercados/pages/item_page.dart';
+import 'package:uidelojadesupermercados/pages/order_page.dart';
 
 import 'pages/home_page.dart';
 
@@ -38,6 +39,7 @@ class _MyAppState extends State<MyApp> {
         "/":(context) => const HomePage(),
         "itemPage":(context) => const ItemPage(),
         "cartPage":(context) => const CartPage(),
+        "orderPage":(context) => const OrderPage(),
       },
     );
   }
